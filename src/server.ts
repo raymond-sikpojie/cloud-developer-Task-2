@@ -18,7 +18,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   // GET /filteredimage endpoint
   // Filters, downloads and returns an image from a public url
-  app.get("/filteredimage", async (req, res) => {
+  app.get("/filteredimage", async (req: Request, res: Response) => {
   
    let imageUrl = req.query.image_url
     
@@ -43,7 +43,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   
   // Root Endpoint
   // Displays a simple message to the user
-  app.get( "/", async ( req, res ) => {
+  app.get( "/", async (req: Request, res: Response) => {
     res.send("try GET /filteredimage?image_url={{}}")
   } );
   
